@@ -16,7 +16,7 @@ const reviewRouter = require('./routes/reviewRoutes');
 const viewRouter = require('./routes/viewsRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 
-
+//express Started 
 const app = express();
 app.use(cors());
 app.set('view engine', 'pug');
