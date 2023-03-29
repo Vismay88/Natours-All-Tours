@@ -15,7 +15,7 @@ const userRouter = require('./routes/userRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
 const viewRouter = require('./routes/viewsRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
-
+const compress=require('compress')
 //express Started 
 const app = express();
 app.use(cors());
@@ -64,7 +64,7 @@ app.use(
     ]
   })
 );
-
+app.use(compress());
 // Test middleware
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
