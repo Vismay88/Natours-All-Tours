@@ -10,17 +10,10 @@ process.on('uncaughtException', err => {
   process.exit(1);
 });
 
-const DB1 = process.env.DATABASE;  
-mongoose
-  .connect(DB1, {
-    usenewurlparser: true,
-    useunifiedtopology: true,
-  });
-
-const DB = process.env.DATABASE?.replace(
+const DB = process.env.DATABASE.replace(
   '<PASSWORD>',
   process.env.DATABASE_PASSWORD
-)||' ';
+);
 
 mongoose
   .connect(DB, {
