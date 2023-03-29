@@ -64,7 +64,7 @@ app.use(
     ]
   })
 );
-app.use(compress());
+ app.use(compress());
 // Test middleware
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
